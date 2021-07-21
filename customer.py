@@ -1,30 +1,19 @@
-<<<<<<< HEAD
-import user_interface
-from wallet import Wallet
-from backpack import Backpack
-from coins import Coin
-
-
-
-=======
 from backpack import Backpack 
 from wallet import Wallet 
 import user_interface 
 
 
->>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
 class Customer:
-    def __init__(self, name, value):
+    def __init__(self):
         self.wallet = Wallet()
         self.backpack = Backpack()
-        self.coins = Coin(name, value)
 
 
     def gather_coins_from_wallet(self, selected_soda):
         """Method allowing user to choose coins from wallet for payment"""
         will_proceed = False
         customer_payment = []
-        user_interface = User_interface.output_text("Continue to add coins until you are ready to insert them into the machine")
+        user_interface.output_text("Continue to add coins until you are ready to insert them into the machine")
         while will_proceed:
             user_interface.display_can_cost(selected_soda)
             user_interface.display_payment_value(customer_payment)
@@ -49,11 +38,7 @@ class Customer:
     def add_coins_to_wallet(self, coins_list):
         self.add_coins_to_wallet = coins_list
         """Method responsible for adding coins from a list into wallet's money list"""
-<<<<<<< HEAD
-        for coins in self.coins_list:
-=======
         for coin in coins_list:
->>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
             self.wallet.money.append(coins_list)
 
     def add_can_to_backpack(self, dispensed_can):

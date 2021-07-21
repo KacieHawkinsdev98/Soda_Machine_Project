@@ -1,30 +1,13 @@
 import os
-<<<<<<< HEAD
-
-# this is a module, 
-
-class User_interface:
- def __init__ (self):
-      
-
-
-
-
-
-=======
->>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
 # may need to add constructor
 # need user interface class?
 # output_text property
 
-<<<<<<< HEAD
-=======
 
 def __init__(self):
     pass
->>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
 
-  def simulation_main_menu():
+def simulation_main_menu():
     """Main menu prompting user to choose an option"""
     validate_user_selection = (False, None)
     while validate_user_selection[0] is False:
@@ -98,11 +81,7 @@ def soda_selection(inventory):
         i = 1
         for can in soda_options:
             print("\n\tEnter -{i}- for {can} : ${can.price}")
-<<<<<<< HEAD
-            i+= 1
-=======
             i = i + 1
->>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
     return validated_user_selection[1]

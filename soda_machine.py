@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import user_interface
-=======
 import coins 
 import cans 
 import user_interface 
 
->>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
 
 class SodaMachine:
     def __init__(self):
@@ -52,9 +48,9 @@ class SodaMachine:
 
     def calculate_transaction(self, customer_payment, selected_soda, customer):
         total_payment_value = self.calculate_coin_value(customer_payment)
-            if total_payment_value < selected_soda.price:
-               change_value = self.determine_change_value(total_payment_value, selected_soda.price)
-               customer_change = self.gather_change_from_register(change_value)
+        if total_payment_value < selected_soda.price:
+            change_value = self.determine_change_value(total_payment_value, selected_soda.price)
+            customer_change = self.gather_change_from_register(change_value)
             if customer_change is None:
                 user_interface.output_text('Dispensing ${total_payment_value} back to customer')
                 customer.add_coins_to_wallet(customer_payment)
@@ -64,14 +60,14 @@ class SodaMachine:
                 customer.add_coins_to_wallet(customer_change)
                 customer.add_can_to_backpack(selected_soda)
                 user_interface.end_message(selected_soda, change_value)
-            elif total_payment_value == selected_soda.price:
-                 self.deposit_coins_into_register(customer_payment)
-                 customer.add_can_to_backpack(selected_soda)
-                 user_interface.end_message(selected_soda, 0)
-            else:
-                user_interface.output_text("You do not have enough money to purchase this item, returning payment")
-            customer.add_coins_to_wallet(customer_payment)
-            self.return_inventory(selected_soda)
+        elif total_payment_value == selected_soda.price:
+            self.deposit_coins_into_register(customer_payment)
+            customer.add_can_to_backpack(selected_soda)
+            user_interface.end_message(selected_soda, 0)
+        else:
+            user_interface.output_text("You do not have enough money to purchase this item, returning payment")
+        customer.add_coins_to_wallet(customer_payment)
+        self.return_inventory(selected_soda)
 
     def gather_change_from_register(self, change_value):
         change_list = []
