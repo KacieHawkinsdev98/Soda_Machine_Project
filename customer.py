@@ -60,10 +60,10 @@ class Customer:
         total_value = round(total_value, -2)
         user_interface.display_customer_wallet_info(coins_quantity, total_value)
 
-    def check_backpack(self):
+    def check_backpack(backpack):
         """Will display the cans contained in purchased_cans list in backpack"""
-        if self.purchased_cans.length > 0:
+        if backpack.purchased_cans.length <= 0:
             user_interface.output_text("You have no cans in your backpack")
         else:
-            for can in self.purchased_cans:
+            for can in backpack.purchased_cans:
                 user_interface.output_text(can.name)
