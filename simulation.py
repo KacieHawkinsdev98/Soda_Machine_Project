@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+from customer import Customer
 from soda_machine import SodaMachine
-=======
+import user_interface 
 
->>>>>>> 449ac70045e4b4fa54442ed6eecc46e4b7468f3b
+
 
 class Simulation:
     def __init__(self):
@@ -13,21 +13,13 @@ class Simulation:
         customer = Customer()
         soda_machine = SodaMachine()
         will_proceed = False
-        while will_proceed:
+        while will_proceed == False:
             user_option = user_interface.simulation_main_menu()
-<<<<<<< HEAD
-            if user_option == "1":
+            if user_option == 0:
                 soda_machine.begin_transaction(customer)
-            elif user_option == "2":
+            elif user_option == 1:
                 customer.check_coins_in_wallet()
-            elif user_option == "3":
-=======
-            if user_option = "1":
-                soda_machine.begin_transaction(customer)
-            elif user_option = "2":
-                customer.check_coins_in_wallet()
-            elif user_option = "3":
->>>>>>> 449ac70045e4b4fa54442ed6eecc46e4b7468f3b
+            elif user_option == 2:
                 customer.check_backpack()
             else:
                 will_proceed = False
