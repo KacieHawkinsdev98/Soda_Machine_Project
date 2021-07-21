@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import user_interface
 from wallet import Wallet
 from backpack import Backpack
@@ -5,11 +6,19 @@ from coins import Coin
 
 
 
+=======
+from backpack import Backpack 
+from wallet import Wallet 
+import user_interface 
+
+
+>>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
 class Customer:
     def __init__(self, name, value):
         self.wallet = Wallet()
         self.backpack = Backpack()
         self.coins = Coin(name, value)
+
 
     def gather_coins_from_wallet(self, selected_soda):
         """Method allowing user to choose coins from wallet for payment"""
@@ -40,7 +49,11 @@ class Customer:
     def add_coins_to_wallet(self, coins_list):
         self.add_coins_to_wallet = coins_list
         """Method responsible for adding coins from a list into wallet's money list"""
+<<<<<<< HEAD
         for coins in self.coins_list:
+=======
+        for coin in coins_list:
+>>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
             self.wallet.money.append(coins_list)
 
     def add_can_to_backpack(self, dispensed_can):
@@ -64,10 +77,11 @@ class Customer:
         total_value = round(total_value, -2)
         user_interface.display_customer_wallet_info(coins_quantity, total_value)
 
-    def check_backpack():
+    def check_backpack(self):
         """Will display the cans contained in purchased_cans list in backpack"""
-        if backpack.purchased_cans.length > 0:
+        
+        if len(self.backpack.purchased_cans) <= 0:
             user_interface.output_text("You have no cans in your backpack")
         else:
-            for can in backpack.purchased_cans:
+            for can in len(self.backpack.purchased_cans):
                 user_interface.output_text(can.name)

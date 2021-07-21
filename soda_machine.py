@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import user_interface
+=======
+import coins 
+import cans 
+import user_interface 
+
+>>>>>>> da546b0bb481d340effcc55fe0180bedb179096f
 
 class SodaMachine:
     def __init__(self):
