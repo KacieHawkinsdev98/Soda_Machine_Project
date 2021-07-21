@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 from backpack import Backpack
+=======
+import Backpack from backpack
+
+
+>>>>>>> 449ac70045e4b4fa54442ed6eecc46e4b7468f3b
 
 class Customer:
     def __init__(self):

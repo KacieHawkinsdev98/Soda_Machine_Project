@@ -1,7 +1,11 @@
 import os
+<<<<<<< HEAD
 # may need to add constructor
 # need user interface class?
 # output_text property
+=======
+
+>>>>>>> 449ac70045e4b4fa54442ed6eecc46e4b7468f3b
 
 def simulation_main_menu():
     """Main menu prompting user to choose an option"""
