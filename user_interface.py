@@ -44,7 +44,7 @@ def display_customer_wallet_info(coins_list, total_value):
 def display_welcome():
     """Initial method asking user if they'll make a purchase. No errors."""
     print("\nWelcome to the soda machine.  We only take coins as payment. \n")
-    user_response = continue_prompt("Would you like to make a purchase? (y/n):")
+    user_response = continue_prompt("Would you like to make a purchase? (y/n): ")
     if user_response:
         return True
     else:
@@ -118,7 +118,7 @@ def get_unique_can_names(inventory):
 
 def display_can_cost(selected_can):
     """Displays the name of a can and its price"""
-    print(f"The price of a ${selected_can} is ${selected_can.price}")
+    print(f"The price of a {selected_can.name} is ${selected_can.price}")
 
 
 def display_payment_value(customer_payment):
