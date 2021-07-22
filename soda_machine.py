@@ -36,11 +36,13 @@ class SodaMachine:
 
     def run_transaction(self, customer):
         self.fill_inventory()
+        self.fill_register()
+
         selected_soda_name = user_interface.soda_selection(self.inventory)
 
         selected_soda = self.get_inventory_soda(selected_soda_name)
 
-        customer_payment = customer.gather_coins_from_wallet(selected_soda_name)
+        customer_payment = customer.gather_coins_from_wallet(selected_soda)
 
         self.calculate_transaction(customer_payment, selected_soda, customer)
 
