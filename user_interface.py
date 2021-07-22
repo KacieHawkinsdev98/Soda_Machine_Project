@@ -3,7 +3,7 @@ import os
 
 # may need to add constructor
 # need user interface class?
-# output_text property
+# output_text proper
 
 
 def __init__(self):
@@ -84,7 +84,7 @@ def soda_selection(inventory):
         for can in soda_options:
             print(f"\n\tEnter -{i}- for {can.name} : ${can.price}")
             i = i + 1
-        user_selection = try_parse_int(input("Selection:"))
+        user_selection = try_parse_int(input("Selection: "))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
     return validated_user_selection[1]
 
@@ -120,7 +120,7 @@ def get_unique_can_names(inventory):
 
 def display_can_cost(selected_can):
     """Displays the name of a can and its price"""
-    print(f'The price of a {selected_can.price} is ${selected_can.price}')
+    print(f"The price of a ${selected_can} is ${selected_can.price}")
 
 
 def display_payment_value(customer_payment):
