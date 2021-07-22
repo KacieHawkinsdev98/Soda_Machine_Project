@@ -1,4 +1,6 @@
 import os
+
+
 # may need to add constructor
 # need user interface class?
 # output_text proper
@@ -78,7 +80,7 @@ def soda_selection(inventory):
     soda_options = get_unique_can_names(inventory)
     while validated_user_selection[0] is False:
         print("Please choose from the following options:")
-        i = 1
+        i = 0
         for can in soda_options:
             print(f"\n\tEnter -{i}- for {can.name} : ${can.price}")
             i = i + 1
