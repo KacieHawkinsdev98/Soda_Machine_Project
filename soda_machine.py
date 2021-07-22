@@ -35,6 +35,7 @@ class SodaMachine:
             self.run_transaction(customer)
 
     def run_transaction(self, customer):
+        self.fill_inventory()
 
         selected_soda_name = user_interface.soda_selection(self.inventory)
 
