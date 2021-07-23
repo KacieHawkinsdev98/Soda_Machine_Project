@@ -70,7 +70,7 @@ class SodaMachine:
             user_interface.end_message(selected_soda, 0)
         else:
             user_interface.output_text("You do not have enough money to purchase this item, returning payment")
-        customer.add_coins_to_wallet(customer_payment)
+        customer.add_coins_to_wallet(customer_payment) 
         self.return_inventory(selected_soda)
 
     def gather_change_from_register(self, change_value):
