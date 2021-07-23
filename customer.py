@@ -1,6 +1,10 @@
 import user_interface 
 from backpack import Backpack 
 from wallet import Wallet 
+<<<<<<< HEAD
+=======
+import user_interface 
+>>>>>>> 89ad72ef1cef8083abf10d87b66b660fef892aba
 
 
 class Customer:
@@ -36,7 +40,6 @@ class Customer:
         return None
 
     def add_coins_to_wallet(self, coins_list):
-        self.add_coins_to_wallet = coins_list
         """Method responsible for adding coins from a list into wallet's money list"""
         for coin in coins_list:
             self.wallet.money.append(coin)
