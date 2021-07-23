@@ -110,11 +110,7 @@ class SodaMachine:
     def register_has_coin(self, coin_name):
         """Searches register for a type of coin, returns True if coin is found"""
         for coin in self.register:
-<<<<<<< HEAD
-            if coin.name == "coin_name": 
-=======
             if coin.name == coin_name:
->>>>>>> 89ad72ef1cef8083abf10d87b66b660fef892aba
                 return True
         return False
 
@@ -142,7 +138,7 @@ class SodaMachine:
         """Re-adds a remove can back to inventory upon unsuccessful purchase attempt"""
         self.inventory.append(chosen_soda)
 
-    def deposit_coins_into_register(self, coin_list):
+    def deposit_coins_into_register(self, coins_list):
         """Takes in list of coins as argument, adds each coin from list to the register"""
-        for coin in coin_list:
+        for coin in coins_list:
             self.register.append(coin)

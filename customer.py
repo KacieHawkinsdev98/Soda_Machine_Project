@@ -1,10 +1,7 @@
 import user_interface 
 from backpack import Backpack 
 from wallet import Wallet 
-<<<<<<< HEAD
-=======
-import user_interface 
->>>>>>> 89ad72ef1cef8083abf10d87b66b660fef892aba
+
 
 
 class Customer:
