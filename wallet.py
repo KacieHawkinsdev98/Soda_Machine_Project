@@ -3,7 +3,7 @@ import coins
 class Wallet:
     def __init__(self):
         self.money = []
-        self.fill_wallet = () 
+        self.fill_wallet = fill_wallet(self)
 
         
 
@@ -18,3 +18,4 @@ def fill_wallet(self):
         self.money.append(coins.Nickel())
     for index in range(50):
         self.money.append(coins.Penny())
+    

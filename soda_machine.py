@@ -1,12 +1,14 @@
 import coins 
 import cans 
 import user_interface 
+import wallet
 
 
 class SodaMachine:
     def __init__(self):
         self.register = []
         self.inventory = []
+        
 
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
@@ -35,7 +37,7 @@ class SodaMachine:
             self.run_transaction(customer)
 
     def run_transaction(self, customer):
-        self.fill_inventory()
+
         selected_soda_name = user_interface.soda_selection(self.inventory)
 
         selected_soda = self.get_inventory_soda(selected_soda_name)
