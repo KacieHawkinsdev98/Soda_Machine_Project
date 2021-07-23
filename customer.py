@@ -1,7 +1,7 @@
 from backpack import Backpack 
 from wallet import Wallet 
 import user_interface 
-import cans
+
 
 class Customer:
     def __init__(self):
@@ -18,7 +18,7 @@ class Customer:
             user_interface.display_can_cost(selected_soda)
             user_interface.display_payment_value(customer_payment)
             coin_name = user_interface.coin_selection()
-            if coin_name == "done":
+            if coin_name == "Done":
                 break
             payment_coin = self.get_wallet_coin(coin_name)
             if payment_coin is not None:
@@ -36,7 +36,6 @@ class Customer:
         return None
 
     def add_coins_to_wallet(self, coins_list):
-        self.add_coins_to_wallet = coins_list
         """Method responsible for adding coins from a list into wallet's money list"""
         for coin in coins_list:
             self.wallet.money.append(coin)
