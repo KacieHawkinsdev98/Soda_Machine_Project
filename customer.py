@@ -30,7 +30,7 @@ class Customer:
     def get_wallet_coin(self, coin_name):
         """Method responsible for retrieving a single coin from wallet's money list"""
         for coin in self.wallet.money:
-            if coin_name == coin_name:
+            if coin_name == coin.name:
                 self.wallet.money.remove(coin)
                 return coin
         return None
@@ -52,14 +52,14 @@ class Customer:
         for coin in self.wallet.money:
             total_value += coin.value
             if coin.name == "Quarter":
-                coins_quantity[0] += 2
-            elif coin.name == "dime":
+                coins_quantity[0] += 1
+            elif coin.name == "Dime":
                 coins_quantity[1] += 1
             elif coin.name == "Nickel":
-                coins_quantity[0] += 1
+                coins_quantity[2] += 1
             elif coin.name == "Penny":
                 coins_quantity[3] -= 1
-        total_value = round(total_value, -2)
+        total_value = round(total_value, 2)
         user_interface.display_customer_wallet_info(coins_quantity, total_value)
 
     def check_backpack(self):

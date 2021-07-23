@@ -1,6 +1,7 @@
 import coins 
 import cans 
 import user_interface 
+import wallet
 
 
 class SodaMachine:
@@ -35,9 +36,8 @@ class SodaMachine:
             self.run_transaction(customer)
 
     def run_transaction(self, customer):
-        self.fill_inventory()
-        self.fill_register()
-
+        
+    
         selected_soda_name = user_interface.soda_selection(self.inventory)
 
         selected_soda = self.get_inventory_soda(selected_soda_name)
@@ -124,7 +124,7 @@ class SodaMachine:
     def get_inventory_soda(self, selected_soda_name):
         """Returns the first instance of a can whose name matches the selected_soda_name parameter"""
         for can in self.inventory:
-            if can == selected_soda_name:
+            if can.name == selected_soda_name:
                 self.inventory.remove(can)
                 return can
         return None

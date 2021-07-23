@@ -46,7 +46,7 @@ def display_customer_wallet_info(coins_list, total_value):
 def display_welcome():
     """Initial method asking user if they'll make a purchase. No errors."""
     print("\nWelcome to the soda machine.  We only take coins as payment. \n")
-    user_response = continue_prompt("Would you like to make a purchase? (y/n):")
+    user_response = continue_prompt("Would you like to make a purchase? (y/n): ")
     if user_response:
         return True
     else:
@@ -120,7 +120,7 @@ def get_unique_can_names(inventory):
 
 def display_can_cost(selected_can):
     """Displays the name of a can and its price"""
-    print(f"The price of a ${selected_can.name} is ${selected_can.price}")
+    print(f"The price of a {selected_can.name} is ${selected_can.price}")
 
 
 def display_payment_value(customer_payment):
@@ -136,10 +136,10 @@ def coin_selection():
     """Prompts user to choose which coins to deposit and passes their selection in validate_coin_selection"""
     validated_user_selection = (False, None)
     while validated_user_selection[0] is False:
-        print("\n\tEnter -Q- for Quarter")
-        print("\tEnter -D- for Dime")
-        print("\tEnter -N- for Nickel")
-        print("\tEnter -P- for Penny")
+        print("\n\tEnter -1- for Quarter")
+        print("\tEnter -2- for Dime")
+        print("\tEnter -3- for Nickel")
+        print("\tEnter -4- for Penny")
         print("\tEnter -5- for when finished to deposit payment into machine")
         user_input = try_parse_int(input())
         validated_user_selection = validate_coin_selection(user_input)
