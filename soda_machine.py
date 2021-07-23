@@ -1,13 +1,15 @@
 import coins 
 import cans 
 import user_interface 
-import wallet
+
 
 
 class SodaMachine:
     def __init__(self):
         self.register = []
         self.inventory = []
+        self.fill_register()
+        self.fill_inventory()
 
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
@@ -107,7 +109,7 @@ class SodaMachine:
     def register_has_coin(self, coin_name):
         """Searches register for a type of coin, returns True if coin is found"""
         for coin in self.register:
-            if coin.name == "coin_name":
+            if coin.name == "coin_name": 
                 return True
         return False
 
